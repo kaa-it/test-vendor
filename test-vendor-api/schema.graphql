@@ -1,0 +1,45 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+interface Error {
+    message: String!
+}
+
+union VendorsResult = InternalServerError | PermissionDeniedError | UnauthorizedError | VendorsResultSuccess
+
+type InternalServerError implements Error {
+    message: String!
+}
+
+type PermissionDeniedError implements Error {
+    message: String!
+}
+
+type Query {
+    vendors: VendorsResult!
+}
+
+type UnauthorizedError implements Error {
+    message: String!
+}
+
+type Vendor {
+    id: ID!
+    name: String!
+}
+
+type VendorsResultSuccess {
+    vendors: [Vendor!]!
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload
