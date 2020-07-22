@@ -26,7 +26,6 @@ const GET_ALL_VENDORS = gql`
                 }
             }
             ... on Error {
-                __typename
                 message
             }
         }
