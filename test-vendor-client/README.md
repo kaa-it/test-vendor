@@ -1,5 +1,7 @@
 # test-vendor-client
 
+Application for testing of working of Vue.js with GraphQL fragments for error handling in GraphQL API
+
 ## Project setup
 ```
 npm install
